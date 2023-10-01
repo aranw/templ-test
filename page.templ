@@ -1,0 +1,28 @@
+package main
+
+templ Main(current_page string) {
+    <!DOCTYPE html>
+    <html lang="en" class={
+            "h-full",
+            templ.KV("bg-gray-50", current_page == "login"),
+            templ.KV("bg-gray-50", current_page == "register"),
+        }>
+        <head>
+            <meta charset="utf-8" />
+            <link rel="icon" href="/favicon.png" />
+            <meta name="viewport" content="width=device-width" />
+
+            <style type="text/css">
+                .h-full {
+                    height: 100%;
+                }
+
+
+            </style>
+        </head>
+
+        <body class="h-full">
+            Hello World!
+        </body>
+    </html>
+}
